@@ -9,32 +9,22 @@
 <body>
 
     <div class="">
-        <h1>Led?</h1>
-        <button onclick="manda()">ao</button>
+        <h1>Fo</h1>
+        <button onclick="manda()">Ti amo</button>
     </div>
     
 
     <script>
-        function cambia(ao){
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", 'http://192.168.1.10:3000/suona', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.send('suona='+ao);
-        }
+       
 
         function manda(){
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", 'http://192.168.1.10:3000/manda', true);
+            xhr.open("POST", './manda', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.send()
         }
 
-        function led(ao){
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", 'http://192.168.1.10:3000/led', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.send('led='+ao);
-        }
+      
     </script>
 </body>
 </html>

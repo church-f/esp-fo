@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="">
+        <h1>Led?</h1>
+        <button onclick="manda()">ao</button>
+    </div>
+    
+
+    <script>
+        function cambia(ao){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'http://192.168.1.10:3000/suona', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send('suona='+ao);
+        }
+
+        function manda(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'http://192.168.1.10:3000/manda', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send()
+        }
+
+        function led(ao){
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'http://192.168.1.10:3000/led', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send('led='+ao);
+        }
+    </script>
+</body>
+</html>
